@@ -1,0 +1,117 @@
+html{
+    font-size: 62.5%;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    --card__width:320px;
+}
+body{
+    font-size: 1.4rem;
+}
+.navbar{
+    background-color: black;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.navbar input{
+    width: 85vw;
+    height: 5vh;
+    border-radius: 7px;
+    font-size: 1.6rem;
+    color: darkgrey;
+    padding-left: 20px;
+}
+.navbar a{
+    color: darkgrey;
+    padding: 20px;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+}
+.container{
+    background-color: #E8E7ED;
+    width: 90vw;
+    padding: 2%;
+    margin: auto;
+}
+.container h1{
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: capitalize;
+    padding-left: 60px;
+    padding-bottom: 0;
+}
+#movie-container{
+
+    display: flex;
+    flex-direction: row;
+    gap:50px;
+    flex-wrap: wrap;
+    padding:6%;
+    justify-content: start;
+}
+.movie-card{
+    width: var(--card__width);
+    background-color: white;
+    display: grid;
+    grid-template-areas: 'img   img'
+                    'title IMDB'
+                     'update  update-info'
+                     'date  time';
+    align-items: start;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    border-radius: 15px;
+
+}
+.movie-card img{
+    grid-area: img;
+    width:var(--card__width);
+    height: 400px;
+    object-fit: cover;
+}
+.title{
+    grid-area: title;
+    text-transform: capitalize;
+    font-size:1.6rem;
+    font-weight: 900;
+
+}
+.imdb {
+    grid-area:IMDB;
+line-height: 3rem;
+    font-weight: 900;
+}
+.update{
+    grid-area: update;
+    color:darkgrey;
+}
+.update-info{
+    grid-area: update-info;
+    color:darkgrey;
+
+}
+.date{
+    grid-area: date;
+}
+.time{
+    grid-area:time;
+}
+.left{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.imdb span{
+    color: blue;
+    padding: 0 4px;
+}
+.imdb, .title,.update,.update-info,.date,.time{
+    padding:0 8px ;
+}
